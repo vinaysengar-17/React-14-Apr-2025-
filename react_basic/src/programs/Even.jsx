@@ -23,7 +23,8 @@ const Even = () => {
   
   return (
     <>
-      <h1>Number is {(num % 2 === 0) ? "Even" : "Odd"}</h1>
+      <h1>Number is {num}</h1>
+      <h1>and it is {(num % 2 === 0) ? "Even" : "Odd"}</h1>
     </>
   );
 };

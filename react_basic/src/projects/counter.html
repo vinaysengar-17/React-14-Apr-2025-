@@ -22,13 +22,39 @@
   <body>
     <div class="container">
       <div class="value">
-        <p>0</p>
+        <p id="counter">0</p>
       </div>
       <div class="action">
-        <button style="background: green;">Increment</button>
-        <button style="background: yellow;">Reset</button>
-        <button style="background: red;">Decrement</button>
+        <button style="background: green" onclick="increment()">
+          Increment
+        </button>
+        <button style="background: yellow" onclick="reset()">Reset</button>
+        <button style="background: red" onclick="decrement()">Decrement</button>
       </div>
     </div>
+
+    <script>
+      let count = 0;
+      let counterDisplay = document.getElementById("counter");
+      console.log(counterDisplay);
+      function updateDisplay() {
+        counterDisplay.textContent = count;
+      }
+
+      function increment() {
+        count++;
+        updateDisplay();
+      }
+
+      function decrement() {
+        count--;
+        updateDisplay();
+      }
+
+      function reset() {
+        count = 0;
+        updateDisplay();
+      }
+    </script>
   </body>
 </html>

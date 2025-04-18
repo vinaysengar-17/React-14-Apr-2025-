@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./p1.css";
 
 function P1() {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+  let color;
+  if (count > 0) {
+    color = "green";
+  } else if (count < 0) {
+    color = "red";
+  } else {
+    color= "black";
+  }
   return (
-    <div class="container">
-      <div class="value">
-        <p>0</p>
+    <div className="container">
+      <div className="value">
+        <p style={{ color }}>{count}</p>
       </div>
-      <div class="action">
-        <button style={{ background: "green" }}>Increment</button>
-        <button style={{ background: "yellow" }}>Reset</button>
-        <button style={{ background: "red" }}>Decrement</button>
+      <div className="action">
+        <button onClick={increment}>Increment</button>
+        &nbsp;&nbsp; &nbsp;&nbsp;{" "}
+        <button onClick={() => setCount(0)}>Reset</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"  "}
+        <button onClick={decrement}>Decrement</button>
       </div>
     </div>
   );

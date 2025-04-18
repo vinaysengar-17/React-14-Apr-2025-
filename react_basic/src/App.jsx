@@ -21,17 +21,18 @@
 
 // export default App;
 
-
-import React from 'react'
-import P1 from './projects/P1'
+import React from "react";
+import P1 from "./projects/P1";
+import Pr2 from "./projects/Pr2";
+import Pr3 from "./projects/Pr3";
 
 const App = () => {
   return (
-    <div>
-      <P1 />
+    <div >
+    
+      <Pr3 />
     </div>
-  )
-}
+  );
+};
 
-export default App
-
+export default App;
